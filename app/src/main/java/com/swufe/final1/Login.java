@@ -10,7 +10,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 //1. 登录
-//昵称不能为空或者空格
+//昵称不能为空或者空格——>随便，只是一个名字，输不输入都无所谓
+
 public class Login extends AppCompatActivity {
     Button button;
     EditText editText;
@@ -32,12 +33,12 @@ public class Login extends AppCompatActivity {
 
                 Log.i(TAG,editText.getText().toString());
 
-                //啥也没——提示信息：昵称不能为空
+                //昵称可以为空
                 if(editText.getText().toString().equals("")) {
                     //得等一会儿就会消失了
                     Toast.makeText(Login.this,"请为自己起一个好听的名字吧~",Toast.LENGTH_LONG).show();
-                    //Toast.makeText(this, "hello msg", Toast.LENGTH_SHORT).show();//消息提示
-                  //  startActivity(intent);
+                    //不输入昵称也可以正常跳转
+                    startActivity(intent);
                 }else{
                     //通过bundle传给指定页面
                     bundle.putString("name", editText.getText().toString());

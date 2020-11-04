@@ -1,7 +1,6 @@
 package com.swufe.final1;
 
 import android.content.Intent;
-//import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,9 +15,7 @@ import com.swufe.final1.database.DBWords;
 
 public class InputWordsActivity extends AppCompatActivity {
 
-    /**
-     * 创建控件
-     */
+    //创建控件
     TextView textView;
     Button input, button_input, button_recite, button_check, button_self;
     EditText editText_word, editText_translate;
@@ -29,19 +26,20 @@ public class InputWordsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_words);
 
-        /**
-         * 初始化控件
-         */
+        //初始化控件
         textView = (TextView) findViewById(R.id.name);
         editText_word = (EditText) findViewById(R.id.et_words);
         editText_translate = (EditText) findViewById(R.id.et_translate);
         input = (Button) findViewById(R.id.btn);
         dbWords = new DBWords(getApplication(), "tb_words", null, 1);
         getButtons();
-        //给录入按钮设置监听的方法
+
+        //给录入按钮设置监听
         setInputListener();
         setListener();
 
+        //通过bundle取出login页面传过来的昵称
+        //如果没有输入昵称，则此代码无效，页面显示默认值“学习人”
         Bundle bundle = getIntent().getExtras();
         try {
             textView.setText(bundle.getString("name"));

@@ -84,14 +84,11 @@ public class DetailWordActivity extends AppCompatActivity {
 
                 mdialog.show();
 
-
             }//onClick
 
 
         });//setOnClickListener
 
-
     }//onCreate
-
 
 }//Activity
