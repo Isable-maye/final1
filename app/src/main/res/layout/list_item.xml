@@ -113,7 +113,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/rightNum"
+            android:id="@+id/rightt"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="num"
@@ -134,7 +134,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/wrongNum"
+            android:id="@+id/wrong"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="num"

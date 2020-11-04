@@ -12,8 +12,8 @@ public class Word {
     private String word;
     private String translate;
     private String number;
-    private int right;
-    private int wrong;
+    private String rightt;
+    private String wrong;
 
 
 
@@ -34,10 +34,10 @@ public class Word {
     public void setTranslate(String translate) {
         this.translate = translate;
     }
-    public void setRight(int right){
-        this.right=right;
+    public void setRightt(String rightt){
+        this.rightt=rightt;
     }
-    public void setWrong(int wrong){
+    public void setWrong(String wrong){
         this.wrong=wrong;
     }
     /**
@@ -57,7 +57,8 @@ public class Word {
     public String getTranslate() {
         return translate;
     }
-    public int getRight(){return right;}
-    public int getWrong(){return wrong;}
+
+    public String getRightt(){return rightt;}
+    public String getWrong(){return wrong;}
 
 }

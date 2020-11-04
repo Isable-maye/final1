@@ -42,7 +42,7 @@ public class FragmentA extends Fragment {
     int number = 0;
     Word word = null;
     int count = 0;
-    int right = 0; //正确数量
+    int rightt = 0; //正确数量
     int wrong = 0; //错误数量
     int delete = 0; //删除数量
 
@@ -105,13 +105,14 @@ public class FragmentA extends Fragment {
             public void onClick(View view) {
                 if (word.getTranslate().equals(editText.getText().toString())) {
                     Toast.makeText(getActivity(),"答对啦，棒棒哒！",Toast.LENGTH_LONG).show();
-                    right++;
-                    // dbWords.updateData(Integer.toString(number),right,wrong);
+                    rightt++;
+                    //dbWords.updateRightt(Integer.toString(number),Integer.toString(rightt));
                     editText.setText("");
                 } else {
                     Toast.makeText(getActivity(),"不对哦，再动动你的小脑袋瓜~",Toast.LENGTH_LONG).show();
                     wrong++;
                     // dbWords.updateData(Integer.toString(number),right,wrong);
+                   // dbWords.updateWrong(Integer.toString(number),Integer.toString(wrong));
                     editText.setText("");
                 }
                 // Test();
@@ -133,6 +134,7 @@ public class FragmentA extends Fragment {
                 editText.setText(word.getTranslate());
                 Toast.makeText(getActivity(),"再接再厉呀~",Toast.LENGTH_LONG).show();
                 wrong++;
+              //  dbWords.updateWrong(Integer.toString(number),Integer.toString(wrong));
                 //  dbWords.updateData(Integer.toString(number),right,wrong);
                 //Test();
             }
@@ -157,9 +159,14 @@ public class FragmentA extends Fragment {
         //dbResult.writeData(dbResult.getReadableDatabase(), "正确：" + right, "错误：" + wrong, "删除：" + delete);
         //dbWords.writeData(dbWords.getReadableDatabase(), Integer.toString(number),right,wrong);
         //word = dbWords.getWord(number);
+        //dbWords.updateData(Integer.toString(number),Integer.toString(right),Integer.toString(wrong));
+        dbWords.updateRightt(Integer.toString(number),Integer.toString(rightt));
+
+        dbWords.updateWrong(Integer.toString(number),Integer.toString(wrong));
+
         wrong = 0;
         delete = 0;
-        right = 0;
+        rightt = 0;
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("已经背完一组咯~").setMessage("是否再来一组？")
                 .setIcon(R.drawable.icon_image)

@@ -16,30 +16,16 @@ import com.swufe.final1.info.Word;
 public class DBWords extends SQLiteOpenHelper {
     //  private static final int VERSION = 1;
     int number = 0;
-   // private static final String DB_NAME = "tv_words.db";
-    private static final String TB_NAME = "tv_words";
+    private static final String TAG = "DBWords";
 
-    final String Create_Table_SQL = "create table tb_words(_id integer primary key autoincrement,numbers,word,translate,t,f)";
+    // private static final String DB_NAME = "tv_words.db";
+    //private static final String TB_NAME = "tv_words";
+
+    final String Create_Table_SQL = "create table tb_words(_id integer primary key autoincrement,numbers,word,translate,rightt,wrong)";
                                                         //在这里有没有空格都可以运行
     //下面用的时候全部都当string
 
-    //final String Create_Table_SQL = "create table "+TB_NAME +"(,,,,,)";
-    //"(_id integer primary key autoincrement,numbers,word,translate,t,f)";//,true,false
 
-    // final String Create_Table_SQL1 = "CREATE TABLE "+TB_NAME+" (, numbers text, word text, translate text, t integer, f integer)";
-//    final String Create_SQL="create table tv_words(" +
-//           "_id integer primary key autoincrement," +
-//           "name varchar(30)," +
-//           "numbers varchar(30)," +
-//           "word varchar(30)," +
-//           "translate varchar(30)," +
-//           "t varchar(30)," +
-//           "f varchar(30))"
-//           ;
-
-    //db.execSQL("create table username( name varchar(5) primary key,password varchar(30))");
-//    public DBWords(Context context){
-//        this(context,DB_NAME,null,VERSION);
 //    }
 
     //构造方法
@@ -67,15 +53,20 @@ public class DBWords extends SQLiteOpenHelper {
      */
     public void writeWord(String word, String translate) {
         number++;
+        String numR="";
+        String numW="";
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put("numbers",number+"");
         values.put("word", word);
         values.put("translate", translate);
-        //4 11：27
-        values.put("t","0");
-        values.put("f","0");
+        //加上这两行就不行
+//       values.put("rightt",numR);
+//        Log.i(TAG,);
+//
+//     values.put("wrong",numW);
+//        Log.i(TAG,editText.getText().toString());
 
         db.insert("tb_words", null, values);
     }
@@ -94,19 +85,33 @@ public class DBWords extends SQLiteOpenHelper {
     /**
      * 更新正误率
      * @param id
-     * @param right
-     * @param wrong
+     * @param rightt
      */
-    public void updateData(String id, String right, String wrong) {
+    public void updateRightt(String id, String rightt) {
         SQLiteDatabase db = this.getWritableDatabase();
         String where = "numbers = ?";
         String[] whereValue = { id };
 
         ContentValues values = new ContentValues();
-        values.put("t", right);
-        values.put("f", wrong);
+        values.put("rightt", rightt);
         db.update("tb_words", values, where, whereValue);
     }
+
+    /**
+     * 更新正误率
+     * @param id
+     * @param wrong
+     */
+    public void updateWrong(String id, String wrong) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String where = "numbers = ?";
+        String[] whereValue = { id };
+
+        ContentValues values = new ContentValues();
+        values.put("wrong", wrong);
+        db.update("tb_words", values, where, whereValue);
+    }
+
 
     public void updateWord(String id, String word, String translate) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -116,6 +121,8 @@ public class DBWords extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("word", word);
         values.put("translate", translate);
+        //values.put("rightt","0");
+       // values.put("wrong","0");
         db.update("tb_words", values, where, whereValue);
     }
 
@@ -133,6 +140,8 @@ public class DBWords extends SQLiteOpenHelper {
         try {
             word.setWord(cursor.getString(cursor.getColumnIndex("word")));
             word.setTranslate(cursor.getString(cursor.getColumnIndex("translate")));
+            //word.setRightt(cursor.getString(cursor.getColumnIndex("rightt")));
+          //  word.setWrong(cursor.getString(cursor.getColumnIndex("wrong")));
         }catch (Exception e){
 
         }

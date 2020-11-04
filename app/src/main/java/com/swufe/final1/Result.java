@@ -42,7 +42,8 @@ public class Result extends AppCompatActivity {
             list.add(map);
         }
         SimpleAdapter simpleAdapter = new SimpleAdapter(Result.this,list, R.layout.list_item,
-                new String[]{"id","right","wrong","delete"},new int[]{R.id.id,R.id.word,R.id.translate,R.id.delete});
+               // new String[]{"id","right","wrong","delete"},new int[]{R.id.id,R.id.word,R.id.translate,R.id.delete});
+                new String[]{"id","right","wrong","delete"},new int[]{R.id.word,R.id.translate,R.id.delete});
 
         listView.setAdapter(simpleAdapter);
 
