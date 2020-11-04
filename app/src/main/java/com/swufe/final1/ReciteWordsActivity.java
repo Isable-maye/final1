@@ -51,15 +51,15 @@ public class ReciteWordsActivity extends AppCompatActivity {
         fragmentA = new FragmentA("单词写译");
         fragmentB = new FragmentB("翻译写英");
         //recite = new Recite("再认");
-       // fragmentC = new FragmentC("再认");
+        //fragmentC = new FragmentC("再认");
         recite2 = new Recite2("再认");
 
         fragments = new ArrayList<>();
         fragments.add(fragmentA);
         fragments.add(fragmentB);
-       // fragments.add(fragmentC);
+        //fragments.add(fragmentC);
         fragments.add(recite2);
-         //fragments.add(recite);
+        //fragments.add(recite);
 
         //strings = new String[]{"英译汉", "汉译英","再认"};
         FragmentAdpter fragmentAdpter = new FragmentAdpter(getSupportFragmentManager(), fragments);

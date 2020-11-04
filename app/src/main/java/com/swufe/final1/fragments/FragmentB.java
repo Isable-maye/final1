@@ -146,7 +146,8 @@ public class FragmentB extends Fragment {
      * 选“否”则停止背词
      */
     public void ifBackToFirst() {
-        dbResult.writeData(dbResult.getReadableDatabase(), "正确：" + right, "错误：" + wrong, "删除：" + delete);
+       // dbResult.writeData(dbResult.getReadableDatabase(), "正确：" + right, "错误：" + wrong, "删除：" + delete);
+       // dbWords.updateData(Integer.toString(number),right,wrong);
         wrong = 0;
         delete = 0;
         right = 0;

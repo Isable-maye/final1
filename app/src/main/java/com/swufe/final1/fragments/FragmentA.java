@@ -21,7 +21,7 @@ import com.swufe.final1.database.DBResult;
 import com.swufe.final1.database.DBWords;
 import com.swufe.final1.info.Word;
 
-
+//fragmentA 崩坏版本
 public class FragmentA extends Fragment {
 
     /**
@@ -106,13 +106,15 @@ public class FragmentA extends Fragment {
                 if (word.getTranslate().equals(editText.getText().toString())) {
                     Toast.makeText(getActivity(),"答对啦，棒棒哒！",Toast.LENGTH_LONG).show();
                     right++;
+                    // dbWords.updateData(Integer.toString(number),right,wrong);
                     editText.setText("");
                 } else {
                     Toast.makeText(getActivity(),"不对哦，再动动你的小脑袋瓜~",Toast.LENGTH_LONG).show();
                     wrong++;
+                    // dbWords.updateData(Integer.toString(number),right,wrong);
                     editText.setText("");
                 }
-               // Test();
+                // Test();
             }
         });
 
@@ -131,6 +133,7 @@ public class FragmentA extends Fragment {
                 editText.setText(word.getTranslate());
                 Toast.makeText(getActivity(),"再接再厉呀~",Toast.LENGTH_LONG).show();
                 wrong++;
+                //  dbWords.updateData(Integer.toString(number),right,wrong);
                 //Test();
             }
         });
@@ -154,7 +157,6 @@ public class FragmentA extends Fragment {
         //dbResult.writeData(dbResult.getReadableDatabase(), "正确：" + right, "错误：" + wrong, "删除：" + delete);
         //dbWords.writeData(dbWords.getReadableDatabase(), Integer.toString(number),right,wrong);
         //word = dbWords.getWord(number);
-       // dbWords.updateData(Integer.toString(number),right,wrong);
         wrong = 0;
         delete = 0;
         right = 0;

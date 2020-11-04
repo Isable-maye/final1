@@ -50,7 +50,7 @@ public class DetailWordActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-//
+
                 final Mdialog mdialog = new Mdialog(DetailWordActivity.this);  //实例化自定义对话框
 
                 //给取消按钮设置监听事件
@@ -71,6 +71,7 @@ public class DetailWordActivity extends AppCompatActivity {
                         if (mdialog.isShowing()){
                             String word = mdialog.editText_word.getText().toString();
                             String translate = mdialog.editText_translate.getText().toString();
+                            //插入数据库 修改后的单词和翻译
                             dbWords.updateWord(bundle.getString("number"),word,translate);
                             System.out.print(bundle.getString("number"));
                             mdialog.dismiss();      //关闭对话框

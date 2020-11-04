@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//原版
+//崩坏版本
 public class allWordsBase0 extends AppCompatActivity {
 
     DBWords dbWords;
@@ -34,7 +34,7 @@ public class allWordsBase0 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_words_all_base);
         dbWords = new DBWords(allWordsBase0.this, "tb_words", null, 1);
-       final ArrayList<Word> words = getWords();
+        final ArrayList<Word> words = getWords();
 
         listView = (ListView) findViewById(R.id.listAll);
 
@@ -49,17 +49,17 @@ public class allWordsBase0 extends AppCompatActivity {
             map.put("id", words.get(i).getNumber() + ".");
             map.put("word", words.get(i).getWord());
             map.put("translate", words.get(i).getTranslate());
-            map.put("true",words.get(i).getRight());
-           // map.put("false",words.get(i).getWrong());
+            //  map.put("t",words.get(i).getRight());
+            //  map.put("f",words.get(i).getWrong());
             list.add(map);
         }
 
         final SimpleAdapter simpleAdapter = new SimpleAdapter(allWordsBase0.this,
                 list, R.layout.list_item,
-               new String[]{"id", "word", "translate","true"},
-                new int[]{R.id.id, R.id.word, R.id.translate,R.id.rightt});
-               // new String[]{"id", "word", "translate"},
-               // new int[]{R.id.id, R.id.word, R.id.translate});
+                // new String[]{"id", "word", "translate","t","f"},
+                //new int[]{R.id.id, R.id.word, R.id.translate,R.id.rightNum,R.id.wrongNum});
+                new String[]{"id", "word", "translate","true"},
+                new int[]{R.id.id, R.id.word, R.id.translate,0});
 
         listView.setAdapter(simpleAdapter);
 
@@ -130,7 +130,7 @@ public class allWordsBase0 extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
-       // super.onResume();
+        // super.onResume();
         ArrayList<Word> words = getWords();
 
         list = new ArrayList<Map<String, Object>>();

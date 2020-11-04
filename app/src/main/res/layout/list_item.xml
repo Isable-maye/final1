@@ -37,34 +37,54 @@
         android:layout_height="50dp"
         android:textSize="20sp"
         android:id="@+id/delete"/>
+    <!--
     <TextView
-        android:id="@+id/rightt"
-
-        android:layout_marginRight="80sp"
+        android:id="@+id/rightN"
+        android:layout_marginRight="100sp"
         android:layout_width="fill_parent"
         android:layout_toRightOf="@+id/translate"
         android:layout_marginLeft="80sp"
         android:layout_height="50dp"
         android:gravity="end"
-        android:text="@string/app_name"
+        android:text="正确"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/rightt"
+        android:layout_marginRight="65sp"
+        android:layout_width="fill_parent"
+        android:layout_toRightOf="@+id/translate"
+        android:layout_marginLeft="80sp"
+        android:layout_height="50dp"
+        android:gravity="end"
+        android:text="Num"
         android:textColor="@android:color/holo_red_light"
         android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/wrongg"
+        android:id="@+id/wrongN"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
+        android:layout_marginLeft="100sp"
+        android:layout_marginRight="35sp"
+        android:layout_toRightOf="@+id/translate"
+        android:gravity="end"
+        android:text="错误"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/wrongg"
 
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="100sp"
         android:layout_toRightOf="@+id/translate"
         android:gravity="end"
-
-        android:text="app_name"
+        android:text="Num"
         android:textColor="@android:color/holo_red_light"
         android:textSize="15sp" />
 
-
-    <!--<Button
+       <Button
         android:layout_alignParentRight="true"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -73,5 +93,59 @@
         android:textSize="20sp"
         android:id="@+id/remove"/>-->
 
+<!--
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="正确 "
+            android:textColor="@color/colorRed"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/rightNum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="num"
+            android:textColor="@color/colorRed"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=" "
+            android:textColor="@color/colorRed"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="错误 "
+            android:textColor="@color/colorRed"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/wrongNum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="num"
+            android:textColor="@color/colorRed"
+            android:textSize="16sp" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=" "
+            android:textColor="@color/colorRed"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+    -->
 
 </RelativeLayout>
+

@@ -27,7 +27,6 @@ public class Result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-
         dbResult = new DBResult(Result.this,"tb_result",null,1);
 
         ArrayList<Result_item> result_items = getResult();
@@ -37,7 +36,7 @@ public class Result extends AppCompatActivity {
         for (int i = 0;i < result_items.size() ;i++) {
             Map<String, Object> map = new HashMap<>();
             map.put("id",result_items.get(i).id+".");
-            map.put("right", result_items.get(i).right);
+           map.put("right", result_items.get(i).right);
             map.put("wrong", result_items.get(i).wrong);
            // map.put("delete", result_items.get(i).delete);
             list.add(map);
