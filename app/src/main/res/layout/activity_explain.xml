@@ -18,17 +18,18 @@
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:text="
-1.首页取的ID会在登录后显示在右上方。
+1. 登录有无昵称都可，无昵称则默认为学习人。在登陆跳转的首页右上角会显示问候和昵称
 "
+            android:layout_marginBottom="20sp"
             android:textSize="20sp"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:text="
-2.在主界面，点击“录入”、“背诵”、“个人中心”、“查找”会显示不同的面板。
+2.在主界面，点击“录入”、“背诵”、“查找”、“个人中心”会显示不同的功能面板
 "
             android:textSize="20sp"
             android:textStyle="bold"/>

@@ -50,7 +50,6 @@ public class DetailWordActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
                 final Mdialog mdialog = new Mdialog(DetailWordActivity.this);  //实例化自定义对话框
 
                 //给取消按钮设置监听事件
@@ -62,7 +61,6 @@ public class DetailWordActivity extends AppCompatActivity {
                         }
                     }
                 });
-
 
                 //给确定按钮设置监听事件
                 mdialog.ensure.setOnClickListener(new View.OnClickListener() {
@@ -77,13 +75,10 @@ public class DetailWordActivity extends AppCompatActivity {
                             mdialog.dismiss();      //关闭对话框
                             textView_word.setText(word);
                             textView_translate.setText(translate);
-
                         }
                     }
                 });
-
                 mdialog.show();
-
             }//onClick
 
 

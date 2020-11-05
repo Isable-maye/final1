@@ -15,9 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
-import com.swufe.final1.InputWordsActivity;
 import com.swufe.final1.R;
-import com.swufe.final1.database.DBResult;
 import com.swufe.final1.database.DBWords;
 import com.swufe.final1.info.Word;
 
