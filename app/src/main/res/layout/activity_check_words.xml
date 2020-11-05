@@ -88,4 +88,5 @@
             android:id="@+id/clear"
             android:textSize="20sp"/>
     </LinearLayout>
+
 </LinearLayout>
