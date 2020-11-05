@@ -11,7 +11,7 @@ import com.swufe.final1.info.Word;
 
 //import static android.icu.text.MessagePattern.ArgType.SELECT;
 
-//这个是改到一半崩坏的版本
+//
 //这个就相当于惯例命名方式的DBHelper
 public class DBWords extends SQLiteOpenHelper {
     //  private static final int VERSION = 1;

@@ -31,7 +31,6 @@ public class FragmentB extends Fragment {
     EditText editText;
     Button button_ensure, button_forget,button_next;
     DBWords dbWords;
-    DBResult dbResult;
     int wordscount = 0;
     int number = 0;
     Word word ;
@@ -43,7 +42,6 @@ public class FragmentB extends Fragment {
     int count = 0;
     int right = 0; //正确数量
     int wrong = 0; //错误数量
-    int delete = 0; //删除数量
 
     public FragmentB(String title){
         super();
@@ -62,12 +60,12 @@ public class FragmentB extends Fragment {
 
         getContext();
         textView = (TextView) view.findViewById(R.id.b_tv_translate);
-          editText = (EditText)view.findViewById(R.id.b_et_word);
+        editText = (EditText)view.findViewById(R.id.b_et_word);
         button_ensure = (Button) view.findViewById(R.id.b_btn_ensure);
         button_forget = (Button) view.findViewById(R.id.b_btn_forget);
         button_next = (Button)view.findViewById(R.id.b_btn_next);
         dbWords = new DBWords(getActivity(), "tb_words", null, 1);
-        dbResult = new DBResult(getActivity(), "tb_result", null, 1);
+       // dbResult = new DBResult(getActivity(), "tb_result", null, 1);
 
         setButtonListener();
         Test();
@@ -119,12 +117,6 @@ public class FragmentB extends Fragment {
         button_forget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-//                dbWords.deleteWord(number+"");
-//                textView.setText("");
-//                editText.setText("");
-//                delete++;
-//                Test();
                 editText.setText(word.getWord());
                 Toast.makeText(getActivity(),"頑張れ~",Toast.LENGTH_LONG).show();
                 wrong++;
@@ -148,7 +140,6 @@ public class FragmentB extends Fragment {
        // dbResult.writeData(dbResult.getReadableDatabase(), "正确：" + right, "错误：" + wrong, "删除：" + delete);
        // dbWords.updateData(Integer.toString(number),right,wrong);
         wrong = 0;
-        delete = 0;
         right = 0;
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("已经背完一组啦！").setMessage("是否再来一组？")

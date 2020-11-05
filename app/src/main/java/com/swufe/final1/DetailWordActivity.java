@@ -1,18 +1,14 @@
 package com.swufe.final1;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import com.swufe.final1.database.DBWords;
-//原版
+
+//
 public class DetailWordActivity extends AppCompatActivity {
 
     /**
@@ -83,7 +79,5 @@ public class DetailWordActivity extends AppCompatActivity {
 
 
         });//setOnClickListener
-
     }//onCreate
-
 }//Activity

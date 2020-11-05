@@ -1,7 +1,6 @@
 package com.swufe.final1;
 
 import android.database.Cursor;
-//import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -75,8 +74,6 @@ public class CheckWordsActivity extends AppCompatActivity {
                 //利用getColumnIndex：String 来获取列的下标，再根据下标获取cursor的值
                 word1.setWord(cursor.getString(cursor.getColumnIndex("word")));
                 word = word1.getWord();
-              //  tv_word.setText("");
-              //  tv_translate.setText("");
             }
         }
         return word;
@@ -96,8 +93,6 @@ public class CheckWordsActivity extends AppCompatActivity {
                 //利用getColumnIndex：String 来获取列的下标，再根据下标获取cursor的值
                 word1.setTranslate(cursor.getString(cursor.getColumnIndex("translate")));
                 translate = word1.getTranslate();
-               // tv_word.setText("");
-               // tv_translate.setText("");
             }
         }
         return translate;

@@ -32,7 +32,7 @@ public class Recite2 extends Fragment {
 
     Button button_ensure, button_delete,button_next;
     DBWords dbWords;
-    DBResult dbResult;
+    //DBResult dbResult;
     int wordscount = 0;
     int number = 0;
     Word word = null;
@@ -64,7 +64,7 @@ public class Recite2 extends Fragment {
         button_delete = (Button) view.findViewById(R.id.recite_btn_unknow);
         button_next = (Button)view.findViewById(R.id.recite_btn_next);
         dbWords = new DBWords(getActivity(), "tb_words", null, 1);
-        dbResult = new DBResult(getActivity(), "tb_result", null, 1);
+      //  dbResult = new DBResult(getActivity(), "tb_result", null, 1);
 
         setButtonListener();
         Test();

@@ -19,7 +19,6 @@ import com.swufe.final1.R;
 import com.swufe.final1.database.DBWords;
 import com.swufe.final1.info.Word;
 
-//fragmentA 崩坏版本
 public class FragmentA extends Fragment {
 
     /**
@@ -35,8 +34,7 @@ public class FragmentA extends Fragment {
     EditText editText;
     Button button_ensure, button_forget,button_next;
     DBWords dbWords;
-    //DBResult dbResult;
-    int wordscount = 0;
+     int wordscount = 0;
     int number = 0;
     Word word = null;
     int count = 0;

@@ -90,13 +90,13 @@ public class InputWordsActivity extends AppCompatActivity {
          * 录词按钮设置监听
          * 实现跳转
          */
-        button_input.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), InputWordsActivity.class);
-                startActivity(intent);
-            }
-        });
+//        button_input.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplication(), InputWordsActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         /**
          * 背词按钮设置监听

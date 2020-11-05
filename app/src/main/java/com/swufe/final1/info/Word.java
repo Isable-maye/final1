@@ -6,31 +6,19 @@ package com.swufe.final1.info;
 
 public class Word {
 
-    /**
-     * 单词属性
-     */
     private String word;
     private String translate;
     private String number;
     private String rightt;
     private String wrong;
 
-
-
-    /**
-     * set方法
-     *
-     * @param number
-     */
+    //set
     public void setNumber(String number) {
         this.number = number;
     }
-
-
     public void setWord(String word) {
         this.word = word;
     }
-
     public void setTranslate(String translate) {
         this.translate = translate;
     }
@@ -40,12 +28,8 @@ public class Word {
     public void setWrong(String wrong){
         this.wrong=wrong;
     }
-    /**
-     * get方法
-     *
-     * @return
-     */
 
+    //get方法
     public String getNumber() {
         return number;
     }
